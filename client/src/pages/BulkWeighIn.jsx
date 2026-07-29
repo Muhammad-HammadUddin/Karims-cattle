@@ -159,13 +159,15 @@ export default function BulkWeighIn() {
     <div className="min-h-screen">
       <Header />
       <main className="max-w-3xl mx-auto px-6 py-8">
-        <h1 className="font-serif text-3xl font-semibold text-forest mb-1">Record Weights</h1>
-        <p className="text-sm text-charcoal/50 mb-6">
-          Pick the month once, then just walk down the list and type each weight.
-        </p>
+        <div className="text-center mb-6">
+          <h1 className="font-serif text-3xl font-semibold text-forest mb-1">Record Weights</h1>
+          <p className="text-sm text-charcoal/50">
+            Pick the month once, then just walk down the list and type each weight.
+          </p>
+        </div>
 
         {step === 1 && (
-          <div className="bg-white border border-sand rounded-lg shadow-card p-6 space-y-5 max-w-md">
+          <div className="bg-white border border-sand rounded-lg shadow-card p-6 space-y-5 max-w-md mx-auto text-left">
             <div>
               <label>Month</label>
               <input type="month" value={month} onChange={(e) => handleMonthChange(e.target.value)} autoFocus />

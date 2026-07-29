@@ -151,13 +151,15 @@ export default function BulkVaccinate() {
     <div className="min-h-screen">
       <Header />
       <main className="max-w-3xl mx-auto px-6 py-8">
-        <h1 className="font-serif text-3xl font-semibold text-forest mb-1">Vaccinate Animals</h1>
-        <p className="text-sm text-charcoal/50 mb-6">
-          Pick the vaccine once, then just tick every animal that got it.
-        </p>
+        <div className="text-center mb-6">
+          <h1 className="font-serif text-3xl font-semibold text-forest mb-1">Vaccinate Animals</h1>
+          <p className="text-sm text-charcoal/50">
+            Pick the vaccine once, then just tick every animal that got it.
+          </p>
+        </div>
 
         {step === 1 && (
-          <div className="bg-white border border-sand rounded-lg shadow-card p-6 space-y-5 max-w-md">
+          <div className="bg-white border border-sand rounded-lg shadow-card p-6 space-y-5 max-w-md mx-auto text-left">
             <div>
               <label>Vaccine</label>
               {!isCustom ? (

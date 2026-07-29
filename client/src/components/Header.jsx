@@ -40,7 +40,7 @@ export default function Header({ onSearch }) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search by Animal ID or owner name..."
-              className="w-full rounded-md border-none bg-sandlight/80 px-4 py-2 text-sm text-charcoal focus:outline-none focus:ring-0"
+              className="w-full rounded-md border border-sand bg-white shadow-sm px-4 py-2 text-sm text-charcoal focus:outline-none focus:border-brass focus:ring-1 focus:ring-brass placeholder:text-charcoal/40 transition-all"
             />
           </div>
         </form>
