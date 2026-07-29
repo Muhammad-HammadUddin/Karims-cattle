@@ -77,7 +77,7 @@ export default function Dashboard() {
                     <th>Owner</th>
                     <th className="hidden sm:table-cell">Breed</th>
                     <th className="hidden sm:table-cell">Arrival</th>
-                    <th>Rate</th>
+                    <th className="hidden md:table-cell">Rate</th>
                     <th>Palai Charges</th>
                     <th>Latest Vaccination</th>
                     <th>Actions</th>

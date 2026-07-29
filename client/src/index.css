@@ -40,10 +40,15 @@ textarea:focus-visible {
   @apply py-3 px-4 border-t border-sand/70 text-sm;
 }
 
-@media (max-width: 640px) {
-  .ledger-table th,
-  .ledger-table td {
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 5rem;
+  }
+  .ledger-table th {
     @apply px-3 py-2.5 text-xs;
+  }
+  .ledger-table td {
+    @apply px-3 py-4 text-[13px];
   }
 }
 

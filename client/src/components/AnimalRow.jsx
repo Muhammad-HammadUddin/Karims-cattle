@@ -12,9 +12,9 @@ export default function AnimalRow({ animal, onQuickVaccinate, onEdit, onDelete }
 
   return (
     <tr>
-      <td>
+      <td className="md:py-3 py-5">
         <Link to={`/animals/${animal.animalId}`} className="group flex items-center gap-3">
-          <AnimalPhoto url={animal.photoUrl} alt={animal.tag || animal.animalId} className="h-10 w-10 shrink-0" />
+          <AnimalPhoto url={animal.photoUrl} alt={animal.tag || animal.animalId} className="h-14 w-14 md:h-10 md:w-10 shrink-0" />
           <div>
             <EarTag id={animal.animalId} size="sm" />
             {animal.tag && <div className="mt-1 text-xs text-charcoal/50">{animal.tag}</div>}
@@ -27,7 +27,7 @@ export default function AnimalRow({ animal, onQuickVaccinate, onEdit, onDelete }
       </td>
       <td className="hidden sm:table-cell">{animal.breed || "—"}</td>
       <td className="hidden sm:table-cell">{fmtDate(animal.arrivalDate)}</td>
-      <td className="font-mono">{animal.rate != null ? `PKR ${Number(animal.rate).toLocaleString()}` : "N/A"}</td>
+      <td className="hidden md:table-cell font-mono">{animal.rate != null ? `PKR ${Number(animal.rate).toLocaleString()}` : "N/A"}</td>
       <td className="font-mono">PKR {Number(animal.palaiCharges || 0).toLocaleString()}</td>
       <td>
         {lastVaccination ? (
